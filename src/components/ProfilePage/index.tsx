@@ -13,7 +13,9 @@ const ProfilePage: React.FC = () => {
   return (
     <Container>
       <Banner>
-        <Avatar />
+        <Avatar>
+          <img src="https://twitter.com/oricardo_dev/photo" alt=""/>
+        </Avatar>
       </Banner>
 
       <ProfileData>
