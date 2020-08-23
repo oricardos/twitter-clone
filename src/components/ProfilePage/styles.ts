@@ -34,11 +34,6 @@ export const Avatar = styled.div`
   position: absolute;
   bottom: max(-60px, -10vw);
   left: 15px;
-
-  > img {
-    height: 100%;
-    width: 100%;
-  }
 `;
 
 export const ProfileData = styled.div`
@@ -64,6 +59,25 @@ export const ProfileData = styled.div`
 
     > a {
       text-decoration: none;
+      color: var(--twitter);
+    }
+  }
+
+  > ul {
+    list-style: none;
+    margin: 10px 0;
+
+    > li {
+      font-size: 15px;
+      color: var(--gray);
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+
+      > svg {
+        fill: var(--gray);
+        margin-right: 8px;
+      }
     }
   }
 `;
@@ -83,5 +97,14 @@ export const CakeIcon = styled(Cake)`
 `;
 
 export const Followage = styled.div`
+  display: flex;
 
+  > span {
+    font-size: 15px;
+    color: var(--gray);
+
+    & + span {
+      margin-left: 8px;
+    }
+  }
 `;

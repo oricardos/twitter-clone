@@ -13,9 +13,7 @@ const ProfilePage: React.FC = () => {
   return (
     <Container>
       <Banner>
-        <Avatar>
-          <img src="https://twitter.com/oricardo_dev/photo" alt=""/>
-        </Avatar>
+        <Avatar />
       </Banner>
 
       <ProfileData>
@@ -40,7 +38,7 @@ const ProfilePage: React.FC = () => {
         <Followage>
           <span>
             Seguindo
-            <strong>30</strong>
+            <strong>  30</strong>
           </span>
 
           <span>
