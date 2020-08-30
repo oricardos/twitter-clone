@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components";
 
-import { LocationOn, Cake, } from '../../styles/Icons';
+import { LocationOn, Cake, Verified } from '../../styles/Icons';
+import Button from '../Button';
 
 export const Container = styled.div`
   display: flex;
@@ -19,7 +20,9 @@ export const Banner = styled.div`
   width: 100%;
   height: min(33vh, 199px);
 
-  background: var(--twitter);
+  background-image: url('https://images.unsplash.com/photo-1546146830-2cca9512c68e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=80');
+  background-position: center;
+  background-repeat: no-repeat;
   position: relative;
 
 `;
@@ -34,6 +37,11 @@ export const Avatar = styled.div`
   position: absolute;
   bottom: max(-60px, -10vw);
   left: 15px;
+  
+  > img {
+    width: 100%;
+    border-radius: 50%;
+  }
 `;
 
 export const ProfileData = styled.div`
@@ -41,11 +49,6 @@ export const ProfileData = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-
-  > h1 {
-    font-weight: bold;
-    font-size: 19px;
-  }
 
   > h2 {
     font-weight: normal;
@@ -82,6 +85,23 @@ export const ProfileData = styled.div`
   }
 `;
 
+export const NameProfile = styled.div`
+  display: flex;
+  align-items: center;
+  
+  > h1 {
+    margin-right: 10px;
+    font-weight: bold;
+    font-size: 19px;
+  }
+`;
+
+export const VerifiedIcon = styled(Verified)`
+  width: 19px;
+  height: 19px;
+  color: var(--twitter);
+`;
+
 const iconsCss = css`
   width: 20px;
   height: 20px;
@@ -106,5 +126,20 @@ export const Followage = styled.div`
     & + span {
       margin-left: 8px;
     }
+  }
+`;
+
+export const EditButton = styled(Button)`
+  position: absolute;
+  top: 2vw;
+  right: 7px;
+
+  padding: 4px 16px;
+  font-size: 13px;
+
+  @media (min-width: 320px) {
+    top: 10px;
+    padding: 10px 19px;
+    font-size: 15px;
   }
 `;
