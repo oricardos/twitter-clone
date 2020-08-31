@@ -28,19 +28,25 @@ export const Banner = styled.div`
 `;
 
 export const Avatar = styled.div`
+  flex-shrink: 0;
   width: max(45px, min(135px, 22vw));
   height: max(45px, min(135px, 22vh));
 
-  border: 3.75px solid var(--primary);
   background: var(--gray);
   border-radius: 50%;
   position: absolute;
   bottom: max(-60px, -10vw);
   left: 15px;
+  border: 3.75px solid var(--primary);
   
   > img {
     width: 100%;
     border-radius: 50%;
+  }
+
+  @media (min-width: 700px) {
+    width: max(45px, min(135px, 22vw));
+  height: max(45px, min(135px, 22vh));
   }
 `;
 
