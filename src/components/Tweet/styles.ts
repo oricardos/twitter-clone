@@ -1,4 +1,6 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
+
+import { Chat, Favorite, ShareAlternative, Retweet } from '../../styles/Icons';
 
 export const Container = styled.div`
   display: flex;
@@ -18,53 +20,142 @@ export const Retweeted = styled.div`
   color: var(--gray);
 `;
 
-export const RocketseatIcon = styled.div`
+export const RetweetedIcon = styled(Retweet)`
+  width: 18px;
+  height: 18px;
 
-`; 
+  margin-left: 35px;
+  margin-right: 9px;
+
+  > path {
+    fill: var(--gray);
+  }
+`;
 
 export const Body = styled.div`
-
+  display: flex;
+  margin-top: 3px;
+  position: relative;
 `; 
 
 export const Avatar = styled.div`
+  width: 49px;
+  height: 49px;
 
+  border-radius: 50%;
+  flex-shrink: 0;
+  background: var(--gray);
+  position: absolute;
+  top: 0;
+  left: 0;
 `; 
 
 export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
 
+  width: 100%;
+  margin-top: 2px;
+  padding-left: 60px;
+
+  > img {
+    height: min(285px, max(175px, 41vw));
+    width: 100%;
+    border-radius: 15px;
+    object-fit: cover;
+    margin-top: 12px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
 `;
 
 export const Header = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  white-space: nowrap;
 
+  > strong {
+    margin-right: 5px;
+  }
+
+  > span, time {
+    color: var(--gray);
+  }
+
+  > strong, span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
 `; 
 
-export const Description = styled.div`
-
-`;
-
 export const Dot = styled.div`
-
+  background: var(--gray);
+  width: 2px;
+  height: 2px;
+  margin: 0 10px;
 `;
-export const Icons = styled.div`
 
+export const Description = styled.p`
+  font-size: 14px;
+  margin-top: 4px;
+`;
+
+export const Icons = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 11px auto 0;
+  width: 100%;
+  
+  @media(min-width: 330px){
+    width: 63%;
+  }
+
+  > div {
+    cursor: pointer;
+    transition: opacity 0.3s;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
 `;
 
 export const Status = styled.div`
+  display: flex;
+  align-items: center;
 
+  font-size: 14px;
+
+  > svg {
+    margin-right: 8px;
+  }
 `;
 
-export const CommentIcon = styled.div`
-
+const iconCss = css`
+  width: 19px;
+  height: 19px;
 `;
 
-export const RetweetIcon = styled.div`
-
+export const CommentIcon = styled(Chat)`
+  ${iconCss};
 `;
 
-export const LikeIcon = styled.div`
-
+export const RetweetIcon = styled(Retweet)`
+  ${iconCss};
 `;
 
-export const ShareIcon = styled.div`
+export const LikeIcon = styled(Favorite)`
+  ${iconCss};
+`;
 
+export const ShareIcon = styled(ShareAlternative)`
+  ${iconCss};
 `;

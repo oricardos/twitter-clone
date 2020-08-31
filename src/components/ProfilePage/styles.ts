@@ -28,7 +28,6 @@ export const Banner = styled.div`
 `;
 
 export const Avatar = styled.div`
-  flex-shrink: 0;
   width: max(45px, min(135px, 22vw));
   height: max(45px, min(135px, 22vh));
 
@@ -42,11 +41,6 @@ export const Avatar = styled.div`
   > img {
     width: 100%;
     border-radius: 50%;
-  }
-
-  @media (min-width: 700px) {
-    width: max(45px, min(135px, 22vw));
-  height: max(45px, min(135px, 22vh));
   }
 `;
 
@@ -105,7 +99,10 @@ export const NameProfile = styled.div`
 export const VerifiedIcon = styled(Verified)`
   width: 19px;
   height: 19px;
-  color: var(--twitter);
+  
+  > path {
+    fill: var(--twitter);
+  }
 `;
 
 const iconsCss = css`
