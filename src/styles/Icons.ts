@@ -13,3 +13,5 @@ export { Chat } from 'styled-icons/heroicons-outline';
 export { Verified } from '@styled-icons/octicons/Verified';
 export { Retweet } from '@styled-icons/evil/Retweet';
 export { ShareAlternative } from '@styled-icons/entypo/ShareAlternative';
+export { Twitter } from '@styled-icons/boxicons-logos/Twitter';
+export { ReactLogo } from '@styled-icons/boxicons-logos/ReactLogo';

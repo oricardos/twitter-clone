@@ -10,6 +10,12 @@ export const Container = styled.div`
 
   border-bottom: solid 1px var(--outline);
   max-width: 100%;
+  transition: background-color .3s;
+
+  &:hover {
+    background-color: #15181C;
+    cursor: pointer;
+  }
 `;
 
 export const Retweeted = styled.div`
@@ -136,6 +142,34 @@ export const Status = styled.div`
 
   > svg {
     margin-right: 8px;
+  }
+
+  &:nth-child(1) {
+    &, > svg path {
+      color: var(--gray);
+    }
+  }
+
+  &:nth-child(2) {
+    color: var(--retweet);
+
+    > svg path {
+      fill: var(--retweet);
+    }
+  }
+
+  &:nth-child(3) {
+    color: var(--like);
+
+    > svg {
+      fill: var(--like);
+    }
+  }
+
+  &:nth-child(4) {
+    > svg {
+      fill: var(--gray);
+    }
   }
 `;
 

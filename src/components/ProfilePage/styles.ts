@@ -29,14 +29,13 @@ export const Banner = styled.div`
 
 export const Avatar = styled.div`
   width: max(45px, min(135px, 22vw));
-  height: max(45px, min(135px, 22vh));
-
+  height: max(45px, min(135px, 22vw));
+  border: 3.75px solid var(--primary);
   background: var(--gray);
   border-radius: 50%;
   position: absolute;
   bottom: max(-60px, -10vw);
   left: 15px;
-  border: 3.75px solid var(--primary);
   
   > img {
     width: 100%;
