@@ -160,3 +160,57 @@ export const ProfileIcon = styled(Person)`
   ${iconCss}
 `;
 
+export const Botside = styled.div`
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+`;
+
+export const Avatar = styled.div`
+  width: 39px;
+  height: 39px;
+  flex-shrink: 0;
+  border-radius: 50%;
+
+  > img {
+    width: 100%;
+    border-radius: 50%;
+  }
+`;
+
+export const ProfileData = styled.div`
+  display: none;
+
+  @media (min-width: 1280px) {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    font-size: 14px;
+
+    > span {
+      font-weight: normal;
+      color: var(--gray);
+    }
+  }
+`;
+
+export const ExitIcon = styled(ExitToApp)`
+  display: none;
+
+  @media (min-width: 1280px) {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    color: var(--white);
+    margin-left: 30px;
+    cursor: pointer;
+    transition: color .3s;
+
+    &:hover {
+      > path {
+        color: var(--like);
+      }
+    }
+  }
+`;
+

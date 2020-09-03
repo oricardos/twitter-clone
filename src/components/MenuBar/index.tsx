@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from '../Button'
+import Button from '../Button';
 
 import { Container,
         Topside,
@@ -11,7 +11,12 @@ import { Container,
         EmailIcon,
         FavoriteIcon,
         ProfileIcon,
-        NewTweet } from './styles';
+        NewTweet,
+        ExitIcon,
+        Botside,
+        Avatar,
+        ProfileData
+       } from './styles';
 
 const MenuBar: React.FC = () => {
   return (
@@ -50,6 +55,19 @@ const MenuBar: React.FC = () => {
         </Button>
 
       </Topside>
+
+      <Botside>
+      <Avatar >
+          <img src="https://pbs.twimg.com/profile_images/1150892874499854336/7fYxxBNa_400x400.png" alt="Profile Img"/>
+        </Avatar>
+
+        <ProfileData>
+          <strong>Ricardo Silva</strong>
+          <span>@oricardo_dev</span>
+        </ProfileData>
+
+        <ExitIcon />
+      </Botside>
     </Container>
   );
 };
