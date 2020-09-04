@@ -15,3 +15,4 @@ export { Retweet } from '@styled-icons/evil/Retweet';
 export { ShareAlternative } from '@styled-icons/entypo/ShareAlternative';
 export { Twitter } from '@styled-icons/boxicons-logos/Twitter';
 export { ReactLogo } from '@styled-icons/boxicons-logos/ReactLogo';
+export { ChevronDown } from '@styled-icons/boxicons-regular/ChevronDown';

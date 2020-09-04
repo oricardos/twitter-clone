@@ -9,6 +9,8 @@ export default styled.button<Props>`
   color: ${props => props.outlined ? 'var(--twitter)' : 'var(--white)'};
   border: ${props => props.outlined ? '1px solid var(--twitter)' : 'none'};
   
+  padding: 0;
+
   @media (min-width: 1280px) {
     padding: 16px;
   }
